@@ -1,0 +1,142 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes blur-out {
+  from {
+    filter: blur(0px);
+  }
+  to {
+    filter: blur(5px);
+  }
+}
+
+@keyframes blur-in {
+  from {
+    filter: blur(5px);
+  }
+  to {
+    filter: blur(0px);
+  }
+}
+
+@media screen and (width > 600px) {
+  ::view-transition-old(root) {
+    animation:
+      fade-out 200ms ease-out both,
+      blur-out 200ms ease-out both;
+  }
+  ::view-transition-new(root) {
+    animation:
+      fade-in 300ms ease-in 100ms both,
+      blur-in 300ms ease-in 100ms both;
+  }
+
+  form .form-buttons {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* MAIN */
+  /* LOGIN & REGISTER */
+  .register-form,
+  .login-form {
+    border: 1px solid #d4d4d4;
+  }
+
+  /* Story detail */
+  .story-detail__images {
+    height: 400px;
+  }
+
+  /* New documentations */
+  .new-form__documentations__buttons {
+    flex-direction: row;
+  }
+
+  .new-form__documentations__outputs {
+    grid-template-columns: repeat(2, minmax(200px, 300px));
+  }
+}
+
+@media screen and (width > 800px) {
+  /* MAIN */
+  .story__map__container,
+  .story__map {
+    height: 500px;
+  }
+
+  .story-list {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+
+  /* Story detail */
+  .story-detail__images {
+    height: 500px;
+  }
+
+  /* New documentations */
+  .new-form__documentations__outputs {
+    grid-template-columns: repeat(3, minmax(200px, 300px));
+  }
+
+  /* FOOTER */
+  .footer-content {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (width > 1000px) {
+  /* HEADER */
+  .navigation-drawer {
+    min-height: auto;
+    width: auto;
+    padding: 0;
+    background-color: transparent;
+
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: static;
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .navigation-drawer__navlist-main,
+  .navigation-drawer__navlist {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-content__nav-list li a {
+    display: inline-flex;
+  }
+
+  .drawer-button {
+    display: none;
+  }
+
+  /* MAIN */
+  .story-list__map__container,
+  .story-list__map {
+    height: 600px;
+  }
+
+  .story-list {
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+  }
+
+  .story-detail__images {
+    height: 600px;
+  }
+}
