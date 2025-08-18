@@ -1,0 +1,36 @@
+{
+  "name": "story-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "start-dev": "webpack serve --config webpack.dev.js",
+    "serve": "http-server dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laelachoi/story-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laelachoi/story-app/issues"
+  },
+  "homepage": "https://github.com/laelachoi/story-app#readme",
+  "description": "",
+  "devDependencies": {
+    "@babel/preset-env": "^7.28.3",
+    "babel-loader": "^10.0.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^13.0.1",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.4",
+    "mini-css-extract-plugin": "^2.9.4",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.101.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2",
+    "webpack-merge": "^6.0.1"
+  }
+}
