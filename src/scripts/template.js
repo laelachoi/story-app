@@ -113,8 +113,11 @@ export function generateStoryDetail({ name, description, photoUrl, createdAt, lo
   const lat = location && location.lat ? location.lat : 'Tidak tersedia';
   const lon = location && location.lon ? location.lon : 'Tidak tersedia';
 
+  const briefDescription = description.substring(0, 30);
+
   return `
       <div class="story-detail__header">
+        <h1 class="story-detail__title">${briefDescription}</h1>
         <div class="story-detail__more-info">
           <div class="story-detail__more-info__inline">
             <div id="createdat" class="story-detail__createdat"><i class="fas fa-calendar-alt"></i> ${createdAtFormatted}</div>

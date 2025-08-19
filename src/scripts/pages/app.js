@@ -25,6 +25,16 @@ export default class App {
     this.#skipLinkButton = skipLinkButton;
 
     this.#init();
+    this.initialApp();
+  }
+
+  initialApp() {
+    const accessToken = getAccessToken();
+    const currentUrl = getActiveRoute();
+
+    if (!accessToken && currentUrl !== '#/login' && currentUrl !== '#/register') {
+      window.location.hash = '#/login';
+    }
   }
 
   #init() {
